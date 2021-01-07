@@ -1,0 +1,25 @@
+header {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    font-size: 12px;
+    text-align: center;
+}
+
+label {
+    font-size: 18px;
+    padding: 6px;
+    
+}
+
+input {
+    margin: 10px 0px 10px 0px;
+}

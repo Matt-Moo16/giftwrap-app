@@ -1,0 +1,8 @@
+.GiftList {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    flex-direction: column;
+    align-items: center;
+}
+
