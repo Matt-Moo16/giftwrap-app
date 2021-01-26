@@ -83,7 +83,7 @@ class SignInForm extends Component {
                     <Link to='/'><h1>Giftwrap</h1></Link>
                 </header>
                 <div className='center'>
-                    <img src='https://i.postimg.cc/kgY4mb2h/Person1-removebg-preview.png' width='200'></img>
+                    <img src='https://i.postimg.cc/kgY4mb2h/Person1-removebg-preview.png'></img>
                 </div>
                 <div className='background'>
                     <div className="SignInDiv">
@@ -121,7 +121,6 @@ class SignInForm extends Component {
                         <button>
                             <Link to='/signUp'>Sign Up Here!</Link>
                         </button>
-                        
                     </div>
                 
             </> 

@@ -95,7 +95,7 @@ class SignUpForm extends Component {
                     <Link to='/'><h1>Giftwrap</h1></Link>
                 </header>
                 <div className='center'>
-                <img src='https://i.postimg.cc/hjh2dp6L/Person3-removebg-preview.png'></img>
+                    <img src='https://i.postimg.cc/hjh2dp6L/Person3-removebg-preview.png'></img>
                 </div>
                 <div className='background'>
                     <div className='SignUpDiv'>  

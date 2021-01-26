@@ -35,6 +35,12 @@ input {
     justify-content: center;
 }
 
+img {
+    width: 30%;
+    max-width: 175px;
+    height: auto;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -49,4 +55,12 @@ input {
 
 .sign-in-button {
     margin: 0 auto;
+}
+
+@media screen and (max-width: 300px) {
+
+    .center img {
+        width: 50%;
+        height: auto;    
+    }
 }
