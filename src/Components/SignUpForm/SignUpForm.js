@@ -92,74 +92,79 @@ class SignUpForm extends Component {
         return (
             <>
                 <header>
-                    <h1><Link to='/'>Giftwrap</Link></h1>
+                    <Link to='/'><h1>Giftwrap</h1></Link>
                 </header>
-                <div className='SignUpDiv'>  
-                {this.state.hasError && <ValidationError message={this.state.error}/>}
-                    <form className='SignUpForm' >
-                        <div className='name'>
-                            <label htmlFor='SignUp_name'>
-                                Name:
-                            </label>
-                            <input type='text'
-                            name='name'
-                            id='SignUp_name'
-                            onChange={e => this.updateName(e.target.value)}/>
-                            {this.state.name.touched && <ValidationError message={nameError}/>}
-                        </div>
-                        <div className='email'>
-                            <label htmlFor='SignUp_email'>
-                                Email:
-                            </label>
-                            <input 
-                            type='email'
-                            name='email'
-                            id='SignUp_email'
-                            onChange={e => this.updateEmail(e.target.value)} />
-                            {this.state.email.touched && <ValidationError message={emailError}/>}
-                        </div>
-                        <div className='password'>
-                            <label htmlFor='SignUp_password'>
-                                Password:
-                            </label>
-                            <input 
-                            type='password'
-                            name='password'
-                            id='SignUp_password' 
-                            onChange={e => this.updatePassword(e.target.value)}/>
-                            {this.state.password.touched && <ValidationError message={passwordError}/>}
-                        </div>
-                        <div className='confirmPassword'>
-                            <label htmlFor='SignUp_confirmPassword'>
-                                Confirm Password:
-                            </label>
-                            <input 
-                            type='password'
-                            name='confirmPassword'
-                            id='SignUp_confirmPassword'
-                            onChange={e => this.updateConfirmPassword(e.target.value)}/>
-                            {this.state.confirmPassword.touched && <ValidationError message={confirmPasswordError}/>}
-                        </div>
-                        <div className='button'>
-                            <button type='submit' 
-                            onClick={e => {
-                                try {
-                                    ApiService.postUser(user)
-                                    }
-                                    catch(err) {
-                                        this.setState({hasError: true, error: err})
-                                    }
-                                    }}
-                                    disabled={
-                                        this.validateName() ||
-                                        this.validateEmail() ||
-                                        this.validatePassword() ||
-                                        this.validateConfirmPassword() 
-                                    }>
-                                    Sign Up
-                            </button> 
-                        </div>
-                    </form>
+                <div className='center'>
+                <img src='https://i.postimg.cc/hjh2dp6L/Person3-removebg-preview.png'></img>
+                </div>
+                <div className='background'>
+                    <div className='SignUpDiv'>  
+                    {this.state.hasError && <ValidationError message={this.state.error}/>}
+                        <form className='SignUpForm' >
+                            <div className='name'>
+                                <label htmlFor='SignUp_name'>
+                                    Name:
+                                </label>
+                                <input type='text'
+                                name='name'
+                                id='SignUp_name'
+                                onChange={e => this.updateName(e.target.value)}/>
+                                {this.state.name.touched && <ValidationError message={nameError}/>}
+                            </div>
+                            <div className='email'>
+                                <label htmlFor='SignUp_email'>
+                                    Email:
+                                </label>
+                                <input 
+                                type='email'
+                                name='email'
+                                id='SignUp_email'
+                                onChange={e => this.updateEmail(e.target.value)} />
+                                {this.state.email.touched && <ValidationError message={emailError}/>}
+                            </div>
+                            <div className='password'>
+                                <label htmlFor='SignUp_password'>
+                                    Password:
+                                </label>
+                                <input 
+                                type='password'
+                                name='password'
+                                id='SignUp_password' 
+                                onChange={e => this.updatePassword(e.target.value)}/>
+                                {this.state.password.touched && <ValidationError message={passwordError}/>}
+                            </div>
+                            <div className='confirmPassword'>
+                                <label htmlFor='SignUp_confirmPassword'>
+                                    Confirm Password:
+                                </label>
+                                <input 
+                                type='password'
+                                name='confirmPassword'
+                                id='SignUp_confirmPassword'
+                                onChange={e => this.updateConfirmPassword(e.target.value)}/>
+                                {this.state.confirmPassword.touched && <ValidationError message={confirmPasswordError}/>}
+                            </div>
+                            <div className='button'>
+                                <button type='submit' 
+                                onClick={e => {
+                                    try {
+                                        ApiService.postUser(user)
+                                        }
+                                        catch(err) {
+                                            this.setState({hasError: true, error: err})
+                                        }
+                                        }}
+                                        disabled={
+                                            this.validateName() ||
+                                            this.validateEmail() ||
+                                            this.validatePassword() ||
+                                            this.validateConfirmPassword() 
+                                        }>
+                                        Sign Up
+                                </button> 
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </>
         )

@@ -6,11 +6,9 @@ class Header extends Component {
     render() {
         return (
             <nav className='header'>
-                <h1>
                     <Link to={`/authenticated/${this.props.userId}`}>
-                        Giftwrap
+                        <h1>Giftwrap</h1>
                     </Link>
-                </h1>
                 <button onClick={e => TokenService.clearAuthToken()}>
                     <Link to='/'>
                         Sign Out

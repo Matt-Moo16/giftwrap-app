@@ -1,15 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
 
 .HomePage {
     display: flex;
     text-align: center;
-    margin: auto 15px auto 15px;
+    margin: auto;
     flex-direction: column;
     justify-content: center;
 }
 
-h1 {
-    font-size: 50px;
-    text-decoration: none;
-    font-family:'Dancing Script', cursive;
+.HomePage header {
+    display: block;
+    flex-direction: column;
+    justify-content: center; 
 }
+
+.HomePage header img {
+    justify-content:center;
+    margin-top: 0px;
+    height: 200px;
+}
+
+.HomePage button {
+    width: 100px;
+    height: 30px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.diff-color {
+    background-color: #f5f3f4;
+    padding: 0px 20px 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (min-width: 800px) {
+    .image-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-right: 1px black;
+    }
+
+    .image-div img {
+        max-width: 50%;
+        
+    }
+
+    .box {
+        border-right: 1px solid black;
+        
+    }
+}
+

@@ -80,39 +80,50 @@ class SignInForm extends Component {
         return (
             <>
                 <header>
-                    <h1><Link to='/'>Giftwrap</Link></h1>
+                    <Link to='/'><h1>Giftwrap</h1></Link>
                 </header>
-                {this.state.hasError && (<ValidationError message={this.state.error}/>)}
-                <form className='SignInForm' >
-                    <div className='email'>
-                        <label htmlFor='SignIn_email'>
-                            Email: 
-                        </label>
-                        <input
-                        type='email' 
-                        name='email'
-                        id='SignIn_email'
-                        onChange={e => this.updateEmail(e.target.value)}/>
-                        {this.state.email.touched && (<ValidationError message={emailError}/>)}
-                    </div>
-                    <div className='password'>
-                        <label htmlFor='SignIn_password'>Password:</label>
-                        <input 
-                        type='password'
-                        name='password'
-                        id='SignIn_password'
-                        onChange={e => this.updatePassword(e.target.value)}/> 
-                        {this.state.password.touched && (<ValidationError message={passwordError}/>)}
-                    </div>
-                    <div className='button'>
-                        <input type='submit' value='Sign In' 
-                        disabled={this.validateEmail() || this.validatePassword()}
-                        onClick={e => this.handleSubmit(e)}/> 
-                    </div>
-                </form>
-                <div className='link'>
-                    <Link to='/signUp'>Sign Up Here!</Link>
+                <div className='center'>
+                    <img src='https://i.postimg.cc/kgY4mb2h/Person1-removebg-preview.png' width='200'></img>
                 </div>
+                <div className='background'>
+                    <div className="SignInDiv">
+                        {this.state.hasError && (<ValidationError message={this.state.error}/>)}
+                        <form className='SignInForm' >
+                            <div className='email'>
+                                <label htmlFor='SignIn_email'>
+                                    Email: 
+                                </label>
+                                <input
+                                type='email' 
+                                name='email'
+                                id='SignIn_email'
+                                onChange={e => this.updateEmail(e.target.value)}/>
+                                {this.state.email.touched && (<ValidationError message={emailError}/>)}
+                            </div>
+                            <div className='password'>
+                                <label htmlFor='SignIn_password'>Password:</label>
+                                <input 
+                                type='password'
+                                name='password'
+                                id='SignIn_password'
+                                onChange={e => this.updatePassword(e.target.value)}/> 
+                                {this.state.password.touched && (<ValidationError message={passwordError}/>)}
+                            </div>
+                            <div className='sign-in-button'>
+                                <button type='submit' 
+                                disabled={this.validateEmail() || this.validatePassword()}
+                                onClick={e => this.handleSubmit(e)}>Sign In</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                    <div className='link'>
+                        <button>
+                            <Link to='/signUp'>Sign Up Here!</Link>
+                        </button>
+                        
+                    </div>
+                
             </> 
         );
     }

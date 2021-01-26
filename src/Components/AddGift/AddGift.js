@@ -65,39 +65,41 @@ class AddGift extends Component {
         return (
             <div className='AddGift'>
                 {this.state.hasError && <ValidationError message={this.state.error}/>}
-                <form>
-                    <label htmlFor='AddGift_Url'>
-                        URL:
-                    </label>
-                    <input
-                    type='url'
-                    name='url'
-                    id='AddGift_Url'
-                    placeholder='https://example.com'
-                    onChange={e => this.updateUrl(e.target.value)}/>
-                    {this.state.url.touched && <ValidationError message={urlError}/>}
-                    <label htmlFor='AddGift_Price'>Price:</label>
-                    <input 
-                    type='number'
-                    min='0.00'
-                    max='100000.00'
-                    step='0.01'
-                    name='price'
-                    id='AddGift_Price'
-                    placeholder='$9.99'
-                    onChange={e => this.updatePrice(e.target.value)}
-                    />
-                    {this.state.price.touched && <ValidationError message={priceError}/>}
-                    <input type='submit' value='Add Gift'
-                    onClick={e => {
-                        try {
-                            this.handleSubmit(e)
-                        }
-                        catch(err) {
-                            this.setState({hasError: true, error: err})
-                        }
-                    }}/>
-                </form>
+                <div className='background'>
+                    <form>
+                        <label htmlFor='AddGift_Url'>
+                            URL:
+                        </label>
+                        <input
+                        type='url'
+                        name='url'
+                        id='AddGift_Url'
+                        placeholder='https://example.com'
+                        onChange={e => this.updateUrl(e.target.value)}/>
+                        {this.state.url.touched && <ValidationError message={urlError}/>}
+                        <label htmlFor='AddGift_Price'>Price:</label>
+                        <input 
+                        type='number'
+                        min='0.00'
+                        max='100000.00'
+                        step='0.01'
+                        name='price'
+                        id='AddGift_Price'
+                        placeholder='$9.99'
+                        onChange={e => this.updatePrice(e.target.value)}
+                        />
+                        {this.state.price.touched && <ValidationError message={priceError}/>}
+                        <button type='submit'
+                        onClick={e => {
+                            try {
+                                this.handleSubmit(e)
+                            }
+                            catch(err) {
+                                this.setState({hasError: true, error: err})
+                            }
+                        }}>Add Gift</button>
+                    </form>
+                </div>
             </div>
         )
     }

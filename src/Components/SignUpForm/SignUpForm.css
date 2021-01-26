@@ -1,10 +1,12 @@
 form {
-    align-items:baseline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .SignUpDiv {
-    width: 50%;
-    margin: 0 auto;
-    padding-left: 25%;
+    display: flex;
+    justify-content: center;
     
 }

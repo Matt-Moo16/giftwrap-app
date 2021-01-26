@@ -5,21 +5,48 @@ header {
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
+
 
 .link {
     font-size: 12px;
     text-align: center;
+    margin-top: 25px;
 }
 
 label {
     font-size: 18px;
-    padding: 6px;
-    
+    padding: 6px; 
 }
 
 input {
     margin: 10px 0px 10px 0px;
+}
+
+.SignInForm {
+    display: flex;
+    justify-content: center; 
+}
+
+.SignInDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.background {
+    background-color: #f5f3f4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px 20px 10px 20px;
+}
+
+.sign-in-button {
+    margin: 0 auto;
 }

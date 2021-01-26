@@ -50,26 +50,28 @@ class AddName extends Component {
         return (
             <div className='AddName'>
                 {this.state.hasError && <ValidationError message={this.state.error}/>}
-                <form>
-                   <label htmlFor='name'>Name:</label> 
-                   <input 
-                   type='text'
-                   name='name'
-                   id='name'
-                   onChange={e => this.updateName(e.target.value)}/>
-                    {this.state.name.touched && <ValidationError message={nameError}/>}
-                   <input type='submit' value='Add Name'
-                   onClick={e => {
-                    try {
-                        this.handleSubmit(e)
+                <div className='background'>
+                    <form>
+                    <label htmlFor='name'>Name:</label> 
+                    <input 
+                    type='text'
+                    name='name'
+                    id='name'
+                    onChange={e => this.updateName(e.target.value)}/>
+                        {this.state.name.touched && <ValidationError message={nameError}/>}
+                    <button type='submit' value='Add Name'
+                    onClick={e => {
+                        try {
+                            this.handleSubmit(e)
+                        }
+                        catch(err) {
+                            this.setState({hasError: true, error: err}) 
+                        }
+                        }
                     }
-                    catch(err) {
-                        this.setState({hasError: true, error: err}) 
-                    }
-                    }
-                }
-                disabled={this.validateName()}/>
-                </form>
+                    disabled={this.validateName()}>Add Name</button>
+                    </form>
+                </div>
             </div>
         )
     }

@@ -80,7 +80,7 @@ class GiftList extends Component {
                 <ul>
                     {giftList.map((gift, i) => {
                         return <li key={i}>
-                            {gift.image ? <img src={gift.image} width='200' height='200' alt='Not Found' /> : <img src='https://i.postimg.cc/tJHYX8Zc/gift-graphic.png' width='200' height='200' alt='Present with bow and sparkles'/>}
+                            {gift.image ? <img src={gift.image} width='200' height='200' alt='Not Found' /> : <img src='https://i.postimg.cc/wvZLTr3Z/Gift1-removebg-preview.png'/>}
                             <a href={gift.url} target='_blank' rel='noreferrer'><h2>{gift.title}</h2></a>
                             <p>{gift.description}</p>
                             <h3>${gift.price}</h3>
