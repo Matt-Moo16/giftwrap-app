@@ -34,9 +34,6 @@ function HomePage() {
                     <img src='https://i.postimg.cc/dVskvF4D/People1-removebg-preview.png'></img>
                 </div>
             </div>
-            
-            <img src='https://i.postimg.cc/4y8C9zkD/Flower1-removebg-preview.png' width='200'></img>
-            <img className='confetti-image' src='https://i.postimg.cc/Ss31FD4N/Confetti-removebg-preview.png' width='200'></img>
         </div>
     )
 }
